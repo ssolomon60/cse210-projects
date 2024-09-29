@@ -1,4 +1,8 @@
     {
+<<<<<<< HEAD
+=======
+            {
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
         DisplayWelcome();
         string userName = PromptUserName();
         int favoriteNumber = PromptUserNumber();
@@ -31,4 +35,10 @@
     static void DisplayResult(string userName, int squaredNumber)
     {
         Console.WriteLine($"{userName}, the square of your favorite number is: {squaredNumber}");
+<<<<<<< HEAD
     }
+=======
+    }
+    }
+}
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142

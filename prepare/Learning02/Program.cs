@@ -1,9 +1,6 @@
-using System;
+using System.Formats.Asn1;
 
-class Program
+namespace Elephant
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Learning02 World!");
-    }
+    public class Journal
 }

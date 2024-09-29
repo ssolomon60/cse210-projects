@@ -1,6 +1,16 @@
         List<int> numbers = new List<int>();
         Console.WriteLine("Enter a list of numbers, type 0 when finished.");
 
+<<<<<<< HEAD
+=======
+class Program
+{
+    static void Main(string[] args)
+    {
+                List<int> numbers = new List<int>();
+        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
+
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
         while (true)
         {
             Console.Write("Enter number: ");
@@ -44,4 +54,10 @@
         else
         {
             Console.WriteLine("No numbers were entered.");
+<<<<<<< HEAD
         }
+=======
+        }
+    }
+}
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142

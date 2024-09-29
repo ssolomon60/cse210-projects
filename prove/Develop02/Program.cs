@@ -1,8 +1,13 @@
 using System;
+<<<<<<< HEAD
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Contracts;
 using System.IO;
+=======
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
 
  class Entry
 {
@@ -11,12 +16,18 @@ using System.IO;
     public string _input {get; set;}
     public Entry (string date, string prompt, string input)
     {
+<<<<<<< HEAD
         Console.WriteLine("Hello Develop02 World!");
+=======
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
         _date = date; 
         _prompt = prompt;
         _input = input;
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
     public void DisplayEntry ()
     {
         Console.WriteLine($"{_date} - {_prompt}");
@@ -37,12 +48,21 @@ class PromptGenerator
             "What did you learn today?", 
             "What are you grateful for today?"
         };
+<<<<<<< HEAD
         rand = new Random();
     }
     public string GetRandomPrompt()
     {
         int index = rand.Next(aPrompts.Count); 
         return aPrompts[index];  
+=======
+    }
+    public string GetRandomPrompt()
+    {
+        Random rand = new Random();
+        int index = rand.Next(aPrompts.Count);  // Get a random index
+        return aPrompts[index];  // Return the prompt at that index
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
     }
 }
 class Journal
@@ -51,6 +71,7 @@ class Journal
         public void AddEntry(string prompt, string input)
         {
             string DateNow = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+<<<<<<< HEAD
             Entry  newEntry = new Entry(DateNow, prompt, input);
             entries.Add(newEntry);
             Console.WriteLine("Entry was Added");
@@ -63,6 +84,12 @@ class Journal
                 Console.WriteLine("-");
             }
         }
+=======
+            Entry  newEntry = new Entry(prompt, input, DateNow);
+            entries.Add(newEntry);
+            Console.WriteLine("Entry was Added");
+        }
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
         public void SaveJournal(string filename)
         {
              using (StreamWriter writer = new StreamWriter(filename))
@@ -74,6 +101,7 @@ class Journal
             }
         Console.WriteLine("Journal saved successfully.");
     }
+<<<<<<< HEAD
     
     }
 class JournalProgram
@@ -122,3 +150,15 @@ class JournalProgram
     }
 }
         
+=======
+
+
+        }
+        
+
+    }
+
+
+
+}
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142

@@ -1,6 +1,16 @@
         Random random = new Random();
         string playAgain;
 
+<<<<<<< HEAD
+=======
+class Program
+{
+    static void Main(string[] args)
+    {
+                Random random = new Random();
+        string playAgain;
+
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
         do
         {
             int magicNumber = random.Next(1, 101), guessCount = 0, guess;
@@ -21,4 +31,10 @@
 
         } while (playAgain == "yes");
 
+<<<<<<< HEAD
         Console.WriteLine("Thanks for playing! Goodbye.");
+=======
+        Console.WriteLine("Thanks for playing! Goodbye.");
+    }
+}
+>>>>>>> 0fed5b268f4f4e4eba0b53843d59ad8558c85142
