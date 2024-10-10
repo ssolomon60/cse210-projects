@@ -40,7 +40,7 @@ class Program
     static void Main()
     {
         List<Video> videos = new List<Video>();
-        Video video_1 = new Video("Minecraft Stories Part 1", "Cheesypie", 123456789);
+        Video video_1 = new Video("Minecraft Stories Part 1", "Cheesypie", 625);
         video_1.AddComments(new Comments("George", "What a wack video yo! How you going to let my character die like that"));
 
         videos.Add(video_1);
@@ -48,10 +48,10 @@ class Program
         {
             Console.WriteLine($"Title: {video.title}");
             Console.WriteLine($"Author: {video.author}");
-            Console.WriteLine($"Length: {video.length}");
+            Console.WriteLine($"Length: {video.length} in seconds");
             Console.WriteLine($"Comment Count: {video.GetCommentCount()}");
 
-            Console.WriteLine($"Comments:");
+            Console.WriteLine($"--Comments--");
             foreach (Comments comment in video.GetComments())
             {
                 Console.WriteLine($"{comment.CommentName}: {comment.text}");
