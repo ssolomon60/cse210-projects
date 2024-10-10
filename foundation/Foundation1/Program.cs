@@ -1,20 +1,24 @@
 using System;
 
-class video
+class Video
 {
     public string title;
     public string author;
     public int length;
     public List<Comments> comments = new List<Comments>();
-    public video(string _title, string _author, int _length, int _comments)
+    public Video(string _title, string _author, int _length)
     {
-        _title = title;
-        _author = author;
-        _length = length;
+        title = _title;
+        author = _author;
+        length = _length;
     }
-    public void GetComments()
+    public List<Comments> GetComments()
     {
         return comments;
+    }
+    public void AddComments(Comments comment)
+    {
+        comments.Add(comment);
     }
     public int GetCommentCount()
     {
@@ -27,26 +31,30 @@ class Comments
     public string text;
     public Comments(string _CommentName, string _text)
     {
-        _CommentName = CommentName;
-        _text = text;
+        CommentName =_CommentName;
+        text = _text;
     }
 }
 class Program
 {
     static void Main()
     {
-        List<video> videos = new List<video>();
-        foreach (video video in videos) 
+        List<Video> videos = new List<Video>();
+        Video video_1 = new Video("Minecraft Stories Part 1", "Cheesypie", 123456789);
+        video_1.AddComments(new Comments("George", "What a wack video yo! How you going to let my character die like that"));
+
+        videos.Add(video_1);
+        foreach (Video video in videos) 
         {
             Console.WriteLine($"Title: {video.title}");
             Console.WriteLine($"Author: {video.author}");
             Console.WriteLine($"Length: {video.length}");
-            Console.WriteLine($"Comment Count: {video.GetCommentCount()}")
+            Console.WriteLine($"Comment Count: {video.GetCommentCount()}");
 
-            Console.WriteLine($"Comments:")
-            foreach (Comments comments in comments)
+            Console.WriteLine($"Comments:");
+            foreach (Comments comment in video.GetComments())
             {
-                Console.WriteLine($"{CommentName}: {text}")
+                Console.WriteLine($"{comment.CommentName}: {comment.text}");
             }
 
         }
